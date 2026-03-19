@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -10,12 +9,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     background: #f4f6f8;
-   
 }
 
 header {
     background:#FFFFFF;
-    color: preto;
+    color: black;
     padding: 25px;
     text-align: center;
 }
@@ -61,7 +59,7 @@ header {
     margin-top: 8px;
     padding: 8px 15px;
     background: #25d366;
-    color: preto;
+    color: white;
     border-radius: 20px;
     text-decoration: none;
     font-size: 14px;
@@ -72,51 +70,62 @@ header {
 <body>
 
 <header>
-    <h1></h1>
-   
-<img src="https://kerenninfoeeta-boop.github.io/LOGO.png" alt="Foto Redonda" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
+    <h1>Guia Local de Serviços</h1>
 
-    
-     <h2> SLOGAM DE EMPRESA </h2
-   
+    <img src="https://kerenninfoeeta-boop.github.io/LOGO.png" 
+    alt="Logo" 
+    style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
+
+    <h2>Slogan da Empresa</h2>
 </header>
 
 <div class="container">
 
     <div class="search-box">
-        <input type="text" placeholder="Buscar serviço...">
+        <input type="text" id="searchInput" placeholder="Buscar serviço..." onkeyup="buscarServico()">
     </div>
 
     <div class="service">
-        <h3>AeS Moveis Planejados</h3>
-        <p>Categoria: Moveis Planejados</p>
-        <p>📞 (33) 988621967</p>
-        <a class="whatsapp" href="#">Chamar no WhatsApp</a>
+        <h3>AeS Móveis Planejados</h3>
+        <p>Categoria: Móveis Planejados</p>
+        <p>📞 (33) 98862-1967</p>
+        <a class="whatsapp" href="https://wa.me/5533988621967" target="_blank">Chamar no WhatsApp</a>
     </div>
 
     <div class="service">
         <h3>Larissa Martins</h3>
-        <p>Categoria:Salão de Beleza</p>
-        <p>📞 (33)98899-1458 </p>
-        <a class="whatsapp" href="#">Chamar no WhatsApp</a>
+        <p>Categoria: Salão de Beleza</p>
+        <p>📞 (33) 98899-1458</p>
+        <a class="whatsapp" href="https://wa.me/5533988991458" target="_blank">Chamar no WhatsApp</a>
     </div>
 
     <div class="service">
-        <h3> Camila Carolina</h3>
-        <p>Categoria: Manutenção de cilios</p>
-        <p>📞 (33) 984548866</p>
-        <a class="whatsapp" href="#">Chamar no WhatsApp</a>
+        <h3>Camila Carolina</h3>
+        <p>Categoria: Manutenção de cílios</p>
+        <p>📞 (33) 98454-8866</p>
+        <a class="whatsapp" href="https://wa.me/5533984548866" target="_blank">Chamar no WhatsApp</a>
     </div>
-     
+
     <div class="service">
-    <h3>Loja Zanny e Casa Linda</h3>
-    <p>Categoria: Loja de variedades</p>
-    <p>📞 (33) 98816-3670 (33)988973841</p>
-     <a class="whatsapp" href="#">Chamar no WhatsApp</a>
+        <h3>Loja Zanny e Casa Linda</h3>
+        <p>Categoria: Loja de variedades</p>
+        <p>📞 (33) 98816-3670 / (33) 98897-3841</p>
+        <a class="whatsapp" href="https://wa.me/5533988163670" target="_blank">Chamar no WhatsApp</a>
     </div>
-    
 
 </div>
+
+<script>
+function buscarServico() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let services = document.getElementsByClassName("service");
+
+    for (let i = 0; i < services.length; i++) {
+        let texto = services[i].innerText.toLowerCase();
+        services[i].style.display = texto.includes(input) ? "block" : "none";
+    }
+}
+</script>
 
 </body>
 </html>
