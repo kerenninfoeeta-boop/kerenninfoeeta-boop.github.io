@@ -1,130 +1,341 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Guia Local de Serviços - Jacinto MG</title>
 
+<!-- SEO GOOGLE -->
+<meta name="description" content="Guia local de serviços em Jacinto MG. Encontre profissionais, lojas e serviços locais.">
+<meta name="keywords" content="Jacinto MG, serviços Jacinto, guia comercial Jacinto">
+<meta name="author" content="Kerenn Happuque">
+<meta name="robots" content="index, follow">
+
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f4f6f8;
+
+/* ===== CONFIGURAÇÃO GERAL ===== */
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#121212;
+color:#e4e4e4;
+scroll-behavior:smooth;
 }
 
-header {
-    background:#FFFFFF;
-    color: black;
-    padding: 25px;
-    text-align: center;
+/* ===== MENU ===== */
+nav{
+background:#1e1e1e;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:12px 20px;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,.5);
 }
 
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:bold;
 }
 
-.search-box {
-    text-align: center;
-    margin-bottom: 20px;
+.logo img{
+width:45px;
+height:45px;
+border-radius:50%;
 }
 
-.search-box input {
-    width: 80%;
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+/* MENU LINKS */
+.menu{
+list-style:none;
+display:flex;
+gap:20px;
 }
 
-.service {
-    background: white;
-    padding: 15px;
-    margin-bottom: 12px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.menu a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+transition:.3s;
 }
 
-.service h3 {
-    margin: 0;
-    color: #2d89ef;
+.menu a:hover{
+color:#4da3ff;
 }
 
-.service p {
-    margin: 5px 0;
+/* MENU MOBILE */
+.hamburger{
+display:none;
+font-size:28px;
+cursor:pointer;
 }
 
-.whatsapp {
-    display: inline-block;
-    margin-top: 8px;
-    padding: 8px 15px;
-    background: #25d366;
-    color: white;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 14px;
+/* ===== CONTAINER ===== */
+.container{
+max-width:900px;
+margin:auto;
+padding:20px;
 }
+
+/* ===== BUSCA ===== */
+.search-box{
+text-align:center;
+margin-bottom:15px;
+}
+
+.search-box input{
+width:85%;
+padding:12px;
+border-radius:8px;
+border:none;
+}
+
+/* ===== BOTÕES ANIMADOS ===== */
+button, .btn{
+cursor:pointer;
+transition:all .3s ease;
+}
+
+button:hover, .btn:hover{
+transform:translateY(-3px) scale(1.05);
+box-shadow:0 6px 15px rgba(0,0,0,.4);
+}
+
+/* ===== CATEGORIAS ===== */
+.categorias{
+text-align:center;
+margin-bottom:20px;
+}
+
+.categorias button{
+margin:6px;
+padding:10px 18px;
+border:none;
+border-radius:25px;
+background:#2d89ef;
+color:white;
+font-weight:bold;
+}
+
+/* ===== SERVIÇOS ===== */
+.service{
+background:#1e1e1e;
+padding:15px;
+margin-bottom:15px;
+border-radius:12px;
+box-shadow:0 2px 8px rgba(0,0,0,.4);
+transition:.3s;
+}
+
+.service:hover{
+transform:scale(1.02);
+}
+
+.service h3{
+color:#4da3ff;
+}
+
+/* BOTÕES */
+.btn{
+display:inline-block;
+padding:8px 14px;
+border-radius:20px;
+text-decoration:none;
+color:white;
+margin-top:8px;
+}
+
+.whatsapp{background:#25d366;}
+.maps{background:#ff5252;}
+
+/* ===== FORMULÁRIO ===== */
+form{
+background:#1e1e1e;
+padding:20px;
+border-radius:10px;
+}
+
+form input, form select{
+width:100%;
+padding:10px;
+margin:8px 0;
+border-radius:6px;
+border:none;
+}
+
+form button{
+background:#2d89ef;
+color:white;
+border:none;
+padding:12px;
+border-radius:8px;
+font-weight:bold;
+}
+
+/* ===== RESPONSIVO ===== */
+@media(max-width:768px){
+
+.menu{
+display:none;
+flex-direction:column;
+position:absolute;
+right:0;
+top:60px;
+background:#1e1e1e;
+width:200px;
+padding:20px;
+}
+
+.menu.show{
+display:flex;
+}
+
+.hamburger{
+display:block;
+}
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#1e1e1e;
+margin-top:30px;
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Guia Local de Serviços</h1>
+<!-- MENU -->
+<nav>
 
-    <img src="https://kerenninfoeeta-boop.github.io/LOGO.png" 
-    alt="Logo" 
-    style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
+<div class="logo">
+<img src="https://kerenninfoeeta-boop.github.io/LOGO.png">
+<span>Guia Jacinto</span>
+</div>
 
-    <h2>Slogan da Empresa</h2>
-</header>
+<div class="hamburger" onclick="toggleMenu()">☰</div>
 
-<div class="container">
+<ul class="menu" id="menu">
+<li><a href="#">Início</a></li>
+<li><a href="#servicos">Serviços</a></li>
+<li><a href="#cadastro">Cadastrar</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
 
-    <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Buscar serviço..." onkeyup="buscarServico()">
-    </div>
+</nav>
 
-    <div class="service">
-        <h3>AeS Móveis Planejados</h3>
-        <p>Categoria: Móveis Planejados</p>
-        <p>📞 (33) 98862-1967</p>
-        <a class="whatsapp" href="https://wa.me/5533988621967" target="_blank">Chamar no WhatsApp</a>
-    </div>
+<!-- SERVIÇOS -->
+<div class="container" id="servicos">
 
-    <div class="service">
-        <h3>Larissa Martins</h3>
-        <p>Categoria: Salão de Beleza</p>
-        <p>📞 (33) 98899-1458</p>
-        <a class="whatsapp" href="https://wa.me/5533988991458" target="_blank">Chamar no WhatsApp</a>
-    </div>
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="🔎 Buscar serviço..." onkeyup="buscarServico()">
+</div>
 
-    <div class="service">
-        <h3>Camila Carolina</h3>
-        <p>Categoria: Manutenção de cílios</p>
-        <p>📞 (33) 98454-8866</p>
-        <a class="whatsapp" href="https://wa.me/5533984548866" target="_blank">Chamar no WhatsApp</a>
-    </div>
+<div class="categorias">
+<button onclick="filtrarCategoria('todos')">Todos</button>
+<button onclick="filtrarCategoria('beleza')">Beleza</button>
+<button onclick="filtrarCategoria('construcao')">Construção</button>
+<button onclick="filtrarCategoria('loja')">Loja</button>
+</div>
 
-    <div class="service">
-        <h3>Loja Zanny e Casa Linda</h3>
-        <p>Categoria: Loja de variedades</p>
-        <p>📞 (33) 98816-3670 / (33) 98897-3841</p>
-        <a class="whatsapp" href="https://wa.me/5533988163670" target="_blank">Chamar no WhatsApp</a>
-    </div>
+<div class="service" data-cat="construcao">
+<h3>AeS Móveis Planejados</h3>
+<p>Categoria: Construção</p>
+<a class="btn whatsapp" href="https://wa.me/5533988621967">WhatsApp</a>
+<a class="btn maps" target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Jacinto+MG">📍 Localização</a>
+</div>
+
+<div class="service" data-cat="beleza">
+<h3>Larissa Martins</h3>
+<p>Categoria: Beleza</p>
+<a class="btn whatsapp" href="https://wa.me/5533988991458">WhatsApp</a>
+<a class="btn maps" target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Jacinto+MG">📍 Localização</a>
+</div>
+
+<div class="service" data-cat="beleza">
+<h3>Camila Carolina</h3>
+<p>Categoria: Beleza</p>
+<a class="btn whatsapp" href="https://wa.me/5533984548866">WhatsApp</a>
+<a class="btn maps" target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Jacinto+MG">📍 Localização</a>
+</div>
+
+<div class="service" data-cat="loja">
+<h3>Loja Zanny e Casa Linda</h3>
+<p>Categoria: Loja</p>
+<a class="btn whatsapp" href="https://wa.me/5533988163670">WhatsApp</a>
+<a class="btn maps" target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Jacinto+MG">📍 Localização</a>
+</div>
 
 </div>
 
-<script>
-function buscarServico() {
-    let input = document.getElementById("searchInput").value.toLowerCase();
-    let services = document.getElementsByClassName("service");
+<!-- FORMULÁRIO -->
+<div class="container" id="cadastro">
+<h2>Cadastrar Profissional</h2>
 
-    for (let i = 0; i < services.length; i++) {
-        let texto = services[i].innerText.toLowerCase();
-        services[i].style.display = texto.includes(input) ? "block" : "none";
-    }
+<form>
+<input type="text" placeholder="Nome do profissional" required>
+<input type="text" placeholder="Telefone / WhatsApp" required>
+
+<select required>
+<option value="">Categoria</option>
+<option>Beleza</option>
+<option>Construção</option>
+<option>Loja</option>
+<option>Outros</option>
+</select>
+
+<input type="text" placeholder="Endereço ou Bairro">
+
+<button type="submit">Enviar Cadastro</button>
+</form>
+</div>
+
+<footer id="contato">
+<p>© 2026 - Guia Local de Serviços | Desenvolvido por Kerenn Happuque</p>
+</footer>
+
+<script>
+
+/* MENU MOBILE */
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("show");
 }
+
+/* BUSCA */
+function buscarServico(){
+let input=document.getElementById("searchInput").value.toLowerCase();
+let services=document.getElementsByClassName("service");
+
+for(let i=0;i<services.length;i++){
+let texto=services[i].innerText.toLowerCase();
+services[i].style.display=texto.includes(input)?"block":"none";
+}
+}
+
+/* FILTRO CATEGORIA */
+function filtrarCategoria(cat){
+let services=document.querySelectorAll(".service");
+
+services.forEach(s=>{
+if(cat==="todos" || s.dataset.cat===cat){
+s.style.display="block";
+}else{
+s.style.display="none";
+}
+});
+}
+
 </script>
 
 </body>
