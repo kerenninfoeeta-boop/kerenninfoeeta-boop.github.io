@@ -5,26 +5,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Guia Local de Serviços - Jacinto MG</title>
+<title>Guia de Serviços em Jacinto MG | Encontre Profissionais</title>
 
-<!-- SEO GOOGLE -->
-<meta name="description" content="Guia local de serviços em Jacinto MG. Encontre profissionais, lojas e serviços locais.">
-<meta name="keywords" content="Jacinto MG, serviços Jacinto, guia comercial Jacinto">
+<meta name="description" content="Encontre serviços em Jacinto MG. Beleza, construção, lojas e profissionais locais.">
+<meta name="keywords" content="Jacinto MG, serviços, guia comercial, profissionais">
 <meta name="author" content="Kerenn Happuque">
-<meta name="robots" content="index, follow">
 
 <style>
 
-/* ===== CONFIGURAÇÃO GERAL ===== */
 body{
 margin:0;
-font-family:Arial, sans-serif;
+font-family:Arial;
 background:#121212;
 color:#e4e4e4;
-scroll-behavior:smooth;
 }
 
-/* ===== MENU ===== */
+/* MENU */
 nav{
 background:#1e1e1e;
 display:flex;
@@ -33,117 +29,46 @@ align-items:center;
 padding:12px 20px;
 position:sticky;
 top:0;
-z-index:1000;
-box-shadow:0 2px 10px rgba(0,0,0,.5);
 }
 
-.logo{
-display:flex;
-align-items:center;
-gap:10px;
-font-weight:bold;
-}
-
-.logo img{
-width:45px;
-height:45px;
-border-radius:50%;
-}
-
-/* MENU LINKS */
 .menu{
-list-style:none;
 display:flex;
-gap:20px;
+gap:15px;
+list-style:none;
 }
 
 .menu a{
-text-decoration:none;
 color:white;
+text-decoration:none;
 font-weight:bold;
-transition:.3s;
 }
 
-.menu a:hover{
-color:#4da3ff;
-}
-
-/* MENU MOBILE */
 .hamburger{
 display:none;
-font-size:28px;
+font-size:26px;
 cursor:pointer;
 }
 
-/* ===== CONTAINER ===== */
+/* CONTAINER */
 .container{
 max-width:900px;
 margin:auto;
 padding:20px;
 }
 
-/* ===== BUSCA ===== */
-.search-box{
-text-align:center;
-margin-bottom:15px;
-}
-
+/* BUSCA */
 .search-box input{
-width:85%;
+width:100%;
+max-width:500px;
 padding:12px;
 border-radius:8px;
 border:none;
 }
 
-/* ===== BOTÕES ANIMADOS ===== */
-button, .btn{
-cursor:pointer;
-transition:all .3s ease;
-}
-
-button:hover, .btn:hover{
-transform:translateY(-3px) scale(1.05);
-box-shadow:0 6px 15px rgba(0,0,0,.4);
-}
-
-/* ===== CATEGORIAS ===== */
-.categorias{
-text-align:center;
-margin-bottom:20px;
-}
-
-.categorias button{
-margin:6px;
-padding:10px 18px;
-border:none;
-border-radius:25px;
-background:#2d89ef;
-color:white;
-font-weight:bold;
-}
-
-/* ===== SERVIÇOS ===== */
-.service{
-background:#1e1e1e;
-padding:15px;
-margin-bottom:15px;
-border-radius:12px;
-box-shadow:0 2px 8px rgba(0,0,0,.4);
-transition:.3s;
-}
-
-.service:hover{
-transform:scale(1.02);
-}
-
-.service h3{
-color:#4da3ff;
-}
-
 /* BOTÕES */
 .btn{
 display:inline-block;
-padding:8px 14px;
+padding:12px 18px;
 border-radius:20px;
 text-decoration:none;
 color:white;
@@ -153,7 +78,19 @@ margin-top:8px;
 .whatsapp{background:#25d366;}
 .maps{background:#ff5252;}
 
-/* ===== FORMULÁRIO ===== */
+/* SERVIÇOS */
+.service{
+background:#1e1e1e;
+padding:15px;
+margin-bottom:20px;
+border-radius:12px;
+}
+
+h1{
+color:#4da3ff;
+}
+
+/* FORM */
 form{
 background:#1e1e1e;
 padding:20px;
@@ -164,47 +101,24 @@ form input, form select{
 width:100%;
 padding:10px;
 margin:8px 0;
+border:none;
 border-radius:6px;
-border:none;
 }
 
-form button{
-background:#2d89ef;
-color:white;
-border:none;
-padding:12px;
-border-radius:8px;
-font-weight:bold;
-}
-
-/* ===== RESPONSIVO ===== */
+/* MOBILE */
 @media(max-width:768px){
-
 .menu{
 display:none;
 flex-direction:column;
+background:#1e1e1e;
 position:absolute;
 right:0;
 top:60px;
-background:#1e1e1e;
-width:200px;
-padding:20px;
+padding:15px;
 }
 
-.menu.show{
-display:flex;
-}
-
-.hamburger{
-display:block;
-}
-}
-
-footer{
-text-align:center;
-padding:20px;
-background:#1e1e1e;
-margin-top:30px;
+.menu.show{display:flex;}
+.hamburger{display:block;}
 }
 
 </style>
@@ -214,11 +128,7 @@ margin-top:30px;
 
 <!-- MENU -->
 <nav>
-
-<div class="logo">
-<img src="https://kerenninfoeeta-boop.github.io/LOGO.png">
-<span>Guia Jacinto</span>
-</div>
+<div><b>Guia Jacinto</b></div>
 
 <div class="hamburger" onclick="toggleMenu()">☰</div>
 
@@ -226,88 +136,83 @@ margin-top:30px;
 <li><a href="#">Início</a></li>
 <li><a href="#servicos">Serviços</a></li>
 <li><a href="#cadastro">Cadastrar</a></li>
-<li><a href="#contato">Contato</a></li>
 </ul>
-
 </nav>
 
-<!-- SERVIÇOS -->
-<div class="container" id="servicos">
+<!-- CONTEÚDO -->
+<div class="container">
 
+<h1>Guia de Serviços em Jacinto MG</h1>
+<p>Encontre profissionais locais de confiança em Jacinto MG.</p>
+
+<!-- BUSCA -->
 <div class="search-box">
-<input type="text" id="searchInput" placeholder="🔎 Buscar serviço..." onkeyup="buscarServico()">
+<input type="text" id="searchInput" placeholder="Buscar serviço..." onkeyup="buscarServico()">
 </div>
 
-<div class="categorias">
-<button onclick="filtrarCategoria('todos')">Todos</button>
-<button onclick="filtrarCategoria('beleza')">Beleza</button>
-<button onclick="filtrarCategoria('construcao')">Construção</button>
-<button onclick="filtrarCategoria('loja')">Loja</button>
-</div>
+<p id="noResults" style="display:none;">Nenhum serviço encontrado.</p>
+
+<!-- SERVIÇOS -->
+<div id="servicos">
 
 <div class="service" data-cat="construcao">
 <h3>AeS Móveis Planejados</h3>
-<p>Categoria: Construção</p>
-<a class="btn whatsapp" href="https://wa.me/5533988621967">WhatsApp</a>
-<a class="btn maps" target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=Jacinto+MG">📍 Localização</a>
+<p>Construção</p>
+<a class="btn whatsapp" href="https://wa.me/5533988621967?text=Olá,%20vi%20seu%20serviço%20no%20Guia%20Jacinto">WhatsApp</a>
 </div>
 
 <div class="service" data-cat="beleza">
 <h3>Larissa Martins</h3>
-<p>Categoria: Beleza</p>
+<p>Beleza</p>
 <a class="btn whatsapp" href="https://wa.me/5533988991458">WhatsApp</a>
-<a class="btn maps" target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=Jacinto+MG">📍 Localização</a>
 </div>
 
 <div class="service" data-cat="beleza">
 <h3>Camila Carolina</h3>
-<p>Categoria: Beleza</p>
+<p>Beleza</p>
 <a class="btn whatsapp" href="https://wa.me/5533984548866">WhatsApp</a>
-<a class="btn maps" target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=Jacinto+MG">📍 Localização</a>
 </div>
 
-<div class="service" data-cat="loja">
-<h3>Loja Zanny e Casa Linda</h3>
-<p>Categoria: Loja</p>
-<a class="btn whatsapp" href="https://wa.me/5533988163670">WhatsApp</a>
-<a class="btn maps" target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=Jacinto+MG">📍 Localização</a>
 </div>
 
 </div>
 
 <!-- FORMULÁRIO -->
 <div class="container" id="cadastro">
+
 <h2>Cadastrar Profissional</h2>
 
-<form>
-<input type="text" placeholder="Nome do profissional" required>
-<input type="text" placeholder="Telefone / WhatsApp" required>
+<form action="https://formspree.io/f/SEU_ID" method="POST" id="form">
 
-<select required>
+<input type="text" name="nome" placeholder="Nome" required>
+<input type="text" name="telefone" placeholder="Telefone" required>
+
+<select name="categoria" required>
 <option value="">Categoria</option>
 <option>Beleza</option>
 <option>Construção</option>
 <option>Loja</option>
-<option>Outros</option>
 </select>
 
-<input type="text" placeholder="Endereço ou Bairro">
+<input type="text" name="endereco" placeholder="Endereço">
 
-<button type="submit">Enviar Cadastro</button>
+<button type="submit">Enviar</button>
+
+<p id="msg" style="display:none;color:#4caf50;">Enviado com sucesso!</p>
+
 </form>
-</div>
 
-<footer id="contato">
-<p>© 2026 - Guia Local de Serviços | Desenvolvido por Kerenn Happuque</p>
-</footer>
+<br>
+
+<a class="btn whatsapp" href="https://wa.me/5533988621967?text=Quero%20cadastrar%20meu%20serviço">
+Falar no WhatsApp
+</a>
+
+</div>
 
 <script>
 
-/* MENU MOBILE */
+/* MENU */
 function toggleMenu(){
 document.getElementById("menu").classList.toggle("show");
 }
@@ -316,25 +221,40 @@ document.getElementById("menu").classList.toggle("show");
 function buscarServico(){
 let input=document.getElementById("searchInput").value.toLowerCase();
 let services=document.getElementsByClassName("service");
+let found=false;
 
 for(let i=0;i<services.length;i++){
 let texto=services[i].innerText.toLowerCase();
-services[i].style.display=texto.includes(input)?"block":"none";
-}
-}
 
-/* FILTRO CATEGORIA */
-function filtrarCategoria(cat){
-let services=document.querySelectorAll(".service");
-
-services.forEach(s=>{
-if(cat==="todos" || s.dataset.cat===cat){
-s.style.display="block";
+if(texto.includes(input)){
+services[i].style.display="block";
+found=true;
 }else{
-s.style.display="none";
+services[i].style.display="none";
 }
+}
+
+document.getElementById("noResults").style.display=found?"none":"block";
+}
+
+/* FORM */
+const form=document.getElementById("form");
+const msg=document.getElementById("msg");
+
+form.addEventListener("submit", async function(e){
+e.preventDefault();
+
+let data=new FormData(form);
+
+await fetch(form.action,{
+method:"POST",
+body:data,
+headers:{'Accept':'application/json'}
 });
-}
+
+msg.style.display="block";
+form.reset();
+});
 
 </script>
 
