@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - Seu Bem Estar</title>
+
+   <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <h1>Seu Bem Estar</h1>
+            <p>Cuidando da sua saúde com carinho e dedicação.</p>
+        </div>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="contato.html">Contato</a>
+            <a href="agendamento.html">Agendamento</a>
+            <a href="consultas.html">Consultas</a>
+        </nav>
+
+    </header>
+
+    <main class="pagina">
+
+        <h2>Agendamento de Consulta</h2>
+
+        <p>
+            Preencha o formulário abaixo para solicitar seu atendimento.
+            Nossa equipe entrará em contato para confirmar a consulta.
+        </p>
+
+        <form id="formAgendamento">
+
+            <label for="nome">Nome Completo</label>
+            <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Digite seu nome completo"
+                required>
+
+            <label for="email">E-mail</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Digite seu e-mail"
+                required>
+
+            <label for="telefone">Telefone</label>
+            <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                placeholder="(33) 99999-9999"
+                required>
+
+            <label for="especialidade">Especialidade</label>
+
+            <select id="especialidade" name="especialidade" required>
+
+                <option value="">Selecione</option>
+
+                <option>Clínica Geral</option>
+
+                <option>Cardiologia</option>
+
+                <option>Dermatologia</option>
+
+                <option>Ortopedia</option>
+
+                <option>Ginecologia</option>
+
+            </select>
+
+            <label for="data">Data desejada</label>
+            <input
+                type="date"
+                id="data"
+                name="data"
+                required>
+
+            <label for="horario">Horário desejado</label>
+            <input
+                type="time"
+                id="horario"
+                name="horario"
+                required>
+
+            <label for="observacao">Observação</label>
+
+            <textarea
+                id="observacao"
+                name="observacao"
+                rows="5"
+                placeholder="Escreva alguma observação, se necessário."></textarea>
+
+            <button type="submit">
+
+                Agendar Consulta
+
+            </button>
+
+        </form>
+
+    </main>
+
+    <footer>
+
+        <p>© 2026 Seu Bem Estar - Clínica Médica</p>
+
+    </footer>
+
+   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="JS/supabase.js"></script>
+<script src="JS/script.js"></script>
+
+</body>
+
+</html>
