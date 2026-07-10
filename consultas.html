@@ -13,122 +13,140 @@
 
 <header>
 
-<div class="logo">
-<h1>Seu Bem Estar</h1>
-<p>Cuidando da sua saúde com carinho e dedicação.</p>
-</div>
+    <div class="logo">
+        <h1>Seu Bem Estar</h1>
+        <p>Cuidando da sua saúde com carinho e dedicação.</p>
+    </div>
 
-<nav>
-<a href="index.html">Início</a>
-<a href="sobre.html">Sobre</a>
-<a href="contato.html">Contato</a>
-<a href="agendamento.html">Agendamento</a>
-<a href="consultas.html">Consultas</a>
-</nav>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+        <a href="agendamento.html">Agendamento</a>
+        <a href="consultas.html">Consultas</a>
+    </nav>
 
 </header>
 
+
 <main class="pagina">
 
-<h2>Consultas Agendadas</h2>
+    <h2>Consultas Agendadas</h2>
 
-<p>
-Nesta página serão exibidos todos os agendamentos cadastrados.
-</p>
+    <p>
+        Nesta página serão exibidos todos os agendamentos cadastrados.
+    </p>
 
-<table>
 
-<thead>
+    <table>
 
-<tr>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Especialidade</th>
+                <th>Data</th>
+                <th>Horário</th>
+                <th>Telefone</th>
+            </tr>
+        </thead>
 
-<th>Nome</th>
-<th>Especialidade</th>
-<th>Data</th>
-<th>Horário</th>
-<th>Telefone</th>
 
-</tr>
+        <tbody id="tabelaConsultas">
 
-</thead>
+            <tr>
+                <td colspan="5">
+                    Carregando consultas...
+                </td>
+            </tr>
 
-<tbody id="tabelaConsultas">
+        </tbody>
 
-<tr>
+    </table>
 
-<td colspan="5">
-
-Carregando consultas...
-
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
 
 </main>
 
+
 <footer>
 
-<p>© 2026 Seu Bem Estar - Clínica Médica</p>
+    <p>© 2026 Seu Bem Estar - Clínica Médica</p>
 
 </footer>
 
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 <script src="JS/supabase.js"></script>
+
 
 <script>
 
-async function carregarConsultas(){
+async function carregarConsultas() {
 
-const tabela=document.getElementById("tabelaConsultas");
+    const tabela = document.getElementById("tabelaConsultas");
 
-const {data,error}=await supabase
-.from("consultas")
-.select("*")
-.order("data",{ascending:true});
 
-if(error){
+    const { data, error } = await window.supabaseClient
+        .from("consultas")
+        .select("*")
+        .order("data", { ascending: true });
 
-tabela.innerHTML="<tr><td colspan='5'>Erro ao carregar consultas.</td></tr>";
 
-console.error(error);
+    if (error) {
 
-return;
+        tabela.innerHTML =
+        "<tr><td colspan='5'>Erro ao carregar consultas.</td></tr>";
+
+        console.error(error);
+
+        return;
+    }
+
+
+    if (data.length === 0) {
+
+        tabela.innerHTML =
+        "<tr><td colspan='5'>Nenhuma consulta cadastrada.</td></tr>";
+
+        return;
+    }
+
+
+    tabela.innerHTML = "";
+
+
+    data.forEach(c => {
+
+        tabela.innerHTML += `
+
+        <tr>
+
+            <td>${c.nome}</td>
+
+            <td>${c.especialidade}</td>
+
+            <td>${c.data}</td>
+
+            <td>${c.horario}</td>
+
+            <td>${c.telefone}</td>
+
+        </tr>
+
+        `;
+
+    });
+
 
 }
 
-if(data.length===0){
-
-tabela.innerHTML="<tr><td colspan='5'>Nenhuma consulta cadastrada.</td></tr>";
-
-return;
-
-}
-
-tabela.innerHTML="";
-
-data.forEach(c=>{
-
-tabela.innerHTML+=`
-<tr>
-<td>${c.nome}</td>
-<td>${c.especialidade}</td>
-<td>${c.data}</td>
-<td>${c.horario}</td>
-<td>${c.telefone}</td>
-</tr>
-`;
-
-});
-
-}
 
 carregarConsultas();
 
+
 </script>
 
+
 </body>
+
 </html>

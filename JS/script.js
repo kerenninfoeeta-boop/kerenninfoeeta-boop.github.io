@@ -1,3 +1,6 @@
+
+console.log("Script carregado");
+
 document.addEventListener("DOMContentLoaded", function () {
 
     const formulario = document.getElementById("formAgendamento");
@@ -28,8 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        const { error } = await supabase
-            .from("consultas")
+        const { error } = await supabaseClient
+    .from("consultas")
             .insert([
                 {
                     nome,
