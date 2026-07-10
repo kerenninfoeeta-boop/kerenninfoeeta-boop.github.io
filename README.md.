@@ -1,0 +1,262 @@
+# seu-bem-estar*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#f5f9fc;
+
+    color:#333;
+
+}
+
+header{
+
+    background:#1e88e5;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 60px;
+
+    flex-wrap:wrap;
+
+}
+
+.logo h1{
+
+    font-size:34px;
+
+}
+
+.logo p{
+
+    margin-top:5px;
+
+}
+
+nav{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#ffe082;
+
+}
+
+.banner{
+
+    height:500px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1500&q=80");
+
+    background-size:cover;
+
+    background-position:center;
+
+    color:white;
+
+    padding:20px;
+
+}
+
+.banner h2{
+
+    font-size:48px;
+
+    margin-bottom:20px;
+
+}
+
+.banner p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    margin-bottom:35px;
+
+    font-size:18px;
+
+}
+
+.botao{
+
+    background:#1e88e5;
+
+    color:white;
+
+    padding:15px 35px;
+
+    text-decoration:none;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    transition:.4s;
+
+}
+
+.botao:hover{
+
+    background:#1565c0;
+
+}
+
+.especialidades{
+
+    padding:70px 40px;
+
+    text-align:center;
+
+}
+
+.especialidades h2{
+
+    margin-bottom:50px;
+
+    font-size:35px;
+
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:30px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card h3{
+
+    margin-bottom:15px;
+
+    color:#1565c0;
+
+}
+
+.sobre{
+
+    background:white;
+
+    text-align:center;
+
+    padding:70px 30px;
+
+}
+
+.sobre h2{
+
+    margin-bottom:25px;
+
+    font-size:35px;
+
+}
+
+.sobre p{
+
+    max-width:800px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+footer{
+
+    background:#1565c0;
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px;
+
+    line-height:2;
+
+}
+
+@media(max-width:768px){
+
+header{
+
+    flex-direction:column;
+
+}
+
+nav{
+
+    margin-top:20px;
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.banner h2{
+
+    font-size:34px;
+
+}
+
+}
