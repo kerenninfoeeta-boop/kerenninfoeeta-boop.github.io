@@ -85,12 +85,13 @@ async function carregarConsultas() {
 
     const tabela = document.getElementById("tabelaConsultas");
 
+const { data, error } = await window.supabaseClient
+    .from("consultas")
+    .select("*")
+    .order("data", { ascending: true });
 
-    const { data, error } = await window.supabaseClient
-        .from("consultas")
-        .select("*")
-        .order("data", { ascending: true });
-
+console.log("Dados:", data);
+console.log("Erro:", error);
 
     if (error) {
 
