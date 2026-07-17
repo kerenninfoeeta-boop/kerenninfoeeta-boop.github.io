@@ -390,3 +390,32 @@ footer hr{
     text-align:center;
     color:#ddd;
 }
+/*=========================
+    TOPO
+=========================*/
+
+.topo-info{
+
+    background:#0d47a1;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    padding:10px;
+
+    font-size:14px;
+
+    flex-wrap:wrap;
+
+}
+
+.topo-info div{
+
+    margin:5px;
+
+}
