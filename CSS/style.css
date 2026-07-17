@@ -68,34 +68,36 @@ nav a:hover{
 ========================== */
 
 .banner{
-    height:500px;
-    background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-    url("https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1400&q=80");
+    min-height:650px;
+    background:
+    linear-gradient(rgba(25,118,210,.75), rgba(21,101,192,.75)),
+    url("https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1600&q=80");
 
     background-size:cover;
     background-position:center;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     text-align:center;
     color:white;
+    padding:40px;
 }
-
 .banner-texto{
     max-width:700px;
 }
 
 .banner h2{
-    font-size:45px;
-    margin-bottom:20px;
+    font-size:56px;
+    font-weight:700;
+    margin-bottom:25px;
+    line-height:1.2;
 }
 
 .banner p{
-    font-size:18px;
-    line-height:1.6;
-    margin-bottom:35px;
+    font-size:22px;
+    line-height:1.8;
+    margin-bottom:40px;
+    opacity:.95;
 }
 
 /* ==========================
@@ -105,30 +107,24 @@ nav a:hover{
 .botao,
 button{
 
-    background:#1976d2;
-
+    background:#2e7d32;
     color:white;
-
-    padding:15px 35px;
-
+    padding:18px 45px;
     border:none;
-
-    border-radius:8px;
-
+    border-radius:50px;
     cursor:pointer;
-
     text-decoration:none;
-
-    font-weight:bold;
-
+    font-weight:700;
+    font-size:18px;
     transition:.3s;
+    box-shadow:0 8px 20px rgba(0,0,0,.20);
 
 }
-
 .botao:hover,
 button:hover{
 
-    background:#0d47a1;
+    background:#1b5e20;
+    transform:translateY(-3px);
 
 }
 
