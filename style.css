@@ -419,3 +419,289 @@ footer hr{
     margin:5px;
 
 }
+/* ===== VISUAL NOVO - PÁGINA INICIAL ===== */
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background:#f7f9fc;
+    color:#1f2937;
+    line-height:1.6;
+}
+
+/* Cabeçalho */
+header{
+    background:#ffffff;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo h1{
+    color:#0f3d91;
+    font-size:30px;
+    margin:0;
+}
+
+.logo p{
+    color:#6b7280;
+    font-size:14px;
+    margin-top:4px;
+}
+
+nav{
+    display:flex;
+    gap:18px;
+    align-items:center;
+}
+
+nav a{
+    text-decoration:none;
+    color:#1f2937;
+    font-weight:500;
+    padding:10px 14px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+nav a:hover{
+    background:#e8f0ff;
+    color:#0f3d91;
+}
+
+/* Hero */
+.hero{
+    max-width:1200px;
+    margin:40px auto;
+    padding:60px;
+    background:#ffffff;
+    border-radius:30px;
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    align-items:center;
+    gap:40px;
+    box-shadow:0 20px 40px rgba(0,0,0,.06);
+}
+
+.tag{
+    display:inline-block;
+    background:#e8f0ff;
+    color:#0f3d91;
+    padding:8px 16px;
+    border-radius:999px;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.hero h2{
+    font-size:52px;
+    line-height:1.1;
+    color:#0f172a;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:18px;
+    color:#4b5563;
+    margin-bottom:30px;
+}
+
+.botao{
+    display:inline-block;
+    background:#16a34a;
+    color:#ffffff;
+    padding:16px 34px;
+    border-radius:999px;
+    text-decoration:none;
+    font-weight:700;
+    transition:.3s;
+    box-shadow:0 10px 20px rgba(22,163,74,.25);
+}
+
+.botao:hover{
+    transform:translateY(-2px);
+    background:#15803d;
+}
+
+.hero-image img{
+    width:100%;
+    border-radius:28px;
+    object-fit:cover;
+    max-height:480px;
+}
+
+/* Benefícios */
+.benefits{
+    max-width:1200px;
+    margin:20px auto 60px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.benefit-card{
+    background:#ffffff;
+    padding:30px;
+    border-radius:24px;
+    box-shadow:0 12px 24px rgba(0,0,0,.05);
+    transition:.3s;
+}
+
+.benefit-card:hover{
+    transform:translateY(-4px);
+}
+
+.icon{
+    font-size:42px;
+    margin-bottom:16px;
+}
+
+.benefit-card h3{
+    color:#0f172a;
+    margin-bottom:12px;
+}
+
+.benefit-card p{
+    color:#6b7280;
+}
+
+/* Especialidades */
+.especialidades{
+    max-width:1200px;
+    margin:0 auto;
+    padding:40px 20px 80px;
+    text-align:center;
+}
+
+.especialidades h2{
+    font-size:40px;
+    color:#0f172a;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:24px;
+}
+
+.card{
+    background:#ffffff;
+    padding:32px 24px;
+    border-radius:24px;
+    box-shadow:0 12px 24px rgba(0,0,0,.05);
+    transition:.3s;
+    text-align:left;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card h3{
+    color:#0f3d91;
+    margin-bottom:12px;
+    font-size:22px;
+}
+
+.card p{
+    color:#6b7280;
+}
+
+/* Sobre */
+.sobre{
+    max-width:1000px;
+    margin:0 auto 80px;
+    background:#ffffff;
+    padding:50px;
+    border-radius:30px;
+    text-align:center;
+    box-shadow:0 12px 24px rgba(0,0,0,.05);
+}
+
+.sobre h2{
+    font-size:36px;
+    color:#0f172a;
+    margin-bottom:20px;
+}
+
+.sobre p{
+    color:#4b5563;
+    font-size:18px;
+}
+
+/* Rodapé */
+footer{
+    background:#0f172a;
+    color:#e5e7eb;
+    padding:60px 20px 30px;
+}
+
+.footer-content{
+    max-width:1200px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:40px;
+}
+
+.footer-section h3{
+    color:#ffffff;
+    margin-bottom:16px;
+}
+
+.footer-section p{
+    margin-bottom:10px;
+}
+
+.footer-bottom{
+    max-width:1200px;
+    margin:40px auto 0;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.1);
+    text-align:center;
+    color:#9ca3af;
+}
+
+/* Responsivo */
+@media (max-width: 900px){
+    header{
+        padding:20px;
+        flex-direction:column;
+        gap:16px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+        padding:40px 24px;
+        margin:20px;
+    }
+
+    .hero h2{
+        font-size:38px;
+    }
+
+    .benefits{
+        grid-template-columns:1fr;
+        margin:20px;
+    }
+
+    .especialidades{
+        padding:20px;
+    }
+
+    .sobre{
+        margin:20px;
+        padding:40px 24px;
+    }
+}
