@@ -358,3 +358,42 @@ tr:nth-child(even){
 background:#f2f2f2;
 
 }
+/* ==========================
+   BENEFÍCIOS
+========================== */
+
+.beneficios{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    padding:70px 50px;
+    background:#ffffff;
+}
+
+.beneficio{
+    background:#f8fbff;
+    border-radius:18px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.beneficio:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+
+.beneficio span{
+    font-size:50px;
+}
+
+.beneficio h3{
+    color:#1976d2;
+    margin:20px 0 15px;
+}
+
+.beneficio p{
+    color:#666;
+    line-height:1.6;
+}
