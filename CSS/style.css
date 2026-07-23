@@ -3225,3 +3225,260 @@ font-size:32px;
 
 
 }
+/* =====================================================
+   MELHORIA VISUAL - AGENDAMENTO ALINHADO COM HOME
+===================================================== */
+
+
+/* BANNER PREMIUM */
+
+.agenda-banner{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.agenda-banner::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:50%;
+
+    right:-150px;
+
+    top:-180px;
+
+}
+
+
+.agenda-banner::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    background:rgba(255,255,255,.06);
+
+    border-radius:50%;
+
+    left:-120px;
+
+    bottom:-120px;
+
+}
+
+
+.agenda-banner h1,
+.agenda-banner p{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+/* CARDS DE ESPECIALIDADES */
+
+.agenda-cards div{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border:1px solid #edf3fc;
+
+}
+
+
+.agenda-cards div::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:
+
+    linear-gradient(
+    90deg,
+    var(--azul-claro),
+    var(--azul-escuro)
+    );
+
+}
+
+
+.agenda-cards div:hover{
+
+    box-shadow:
+
+    0 30px 70px rgba(0,0,0,.15);
+
+}
+
+
+/* FORMULARIO PREMIUM */
+
+
+.form-agendamento{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.form-agendamento::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+
+    height:250px;
+
+    background:
+
+    rgba(25,118,210,.06);
+
+    border-radius:50%;
+
+    right:-100px;
+
+    top:-100px;
+
+}
+
+
+.form-agendamento h2{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+
+.form-agendamento input,
+.form-agendamento select,
+.form-agendamento textarea{
+
+    transition:.3s;
+
+}
+
+
+.form-agendamento input:hover,
+.form-agendamento select:hover,
+.form-agendamento textarea:hover{
+
+    border-color:#1976D2;
+
+}
+
+
+
+/* BOTÃO IGUAL AO SITE */
+
+
+.form-agendamento button{
+
+    box-shadow:
+
+    0 15px 35px rgba(13,71,161,.30);
+
+    transition:.3s;
+
+}
+
+
+.form-agendamento button:hover{
+
+    transform:
+
+    translateY(-6px);
+
+    box-shadow:
+
+    0 25px 50px rgba(13,71,161,.35);
+
+}
+
+
+
+/* ANIMAÇÕES */
+
+
+.agenda-banner{
+
+    animation:
+
+    aparecer 1s ease;
+
+}
+
+
+.agenda-cards div{
+
+    animation:
+
+    subir .8s ease;
+
+}
+
+
+.form-agendamento{
+
+    animation:
+
+    subir .9s ease;
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .agenda-banner{
+
+        padding:130px 25px 80px;
+
+    }
+
+
+    .form-agendamento h2{
+
+        font-size:28px;
+
+    }
+
+
+}
