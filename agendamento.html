@@ -2,126 +2,455 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendamento - Seu Bem Estar</title>
 
-   <link rel="stylesheet" href="CSS/style.css">
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Agendamento - Seu Bem Estar</title>
+
+
+<link rel="stylesheet" href="CSS/style.css">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
 </head>
+
 
 <body>
 
-    <header>
 
-        <div class="logo">
-            <h1>Seu Bem Estar</h1>
-            <p>Cuidando da sua saúde com carinho e dedicação.</p>
-        </div>
+<header>
 
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="contato.html">Contato</a>
-            <a href="agendamento.html">Agendamento</a>
-            <a href="consultas.html">Consultas</a>
-        </nav>
 
-    </header>
+<div class="logo">
 
-    <main class="pagina">
+<h1>Seu Bem Estar</h1>
 
-        <h2>Agendamento de Consulta</h2>
+<p>Sua saúde em primeiro lugar.</p>
 
-        <p>
-            Preencha o formulário abaixo para solicitar seu atendimento.
-            Nossa equipe entrará em contato para confirmar a consulta.
-        </p>
+</div>
 
-        <form id="formAgendamento">
 
-            <label for="nome">Nome Completo</label>
-            <input
-                type="text"
-                id="nome"
-                name="nome"
-                placeholder="Digite seu nome completo"
-                required>
 
-            <label for="email">E-mail</label>
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Digite seu e-mail"
-                required>
+<nav>
 
-            <label for="telefone">Telefone</label>
-            <input
-                type="tel"
-                id="telefone"
-                name="telefone"
-                placeholder="(33) 99999-9999"
-                required>
+<a href="index.html">Início</a>
 
-            <label for="especialidade">Especialidade</label>
+<a href="sobre.html">Sobre</a>
 
-            <select id="especialidade" name="especialidade" required>
+<a href="agendamento.html">Agendamento</a>
 
-                <option value="">Selecione</option>
+<a href="consultas.html">Consultas</a>
 
-                <option>Clínica Geral</option>
+<a href="contato.html">Contato</a>
 
-                <option>Cardiologia</option>
+</nav>
 
-                <option>Dermatologia</option>
 
-                <option>Ortopedia</option>
 
-                <option>Ginecologia</option>
+<a href="agendamento.html" class="btn-topo">
 
-            </select>
+Agendar Agora
 
-            <label for="data">Data desejada</label>
-            <input
-                type="date"
-                id="data"
-                name="data"
-                required>
+</a>
 
-            <label for="horario">Horário desejado</label>
-            <input
-                type="time"
-                id="horario"
-                name="horario"
-                required>
 
-            <label for="observacao">Observação</label>
+</header>
 
-            <textarea
-                id="observacao"
-                name="observacao"
-                rows="5"
-                placeholder="Escreva alguma observação, se necessário."></textarea>
 
-            <button type="submit">
 
-                Agendar Consulta
 
-            </button>
 
-        </form>
+<section class="agenda-banner">
 
-    </main>
 
-    <footer>
+<h1>
 
-        <p>© 2026 Seu Bem Estar - Clínica Médica</p>
+Agende sua consulta
 
-    </footer>
+</h1>
 
-   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="JS/supabase.js"></script>
-<script src="JS/script.js"></script>
+
+<p>
+
+Escolha o melhor horário para cuidar da sua saúde.
+
+</p>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="especialidades-agenda">
+
+
+<h2>
+
+Escolha a especialidade
+
+</h2>
+
+
+
+<div class="agenda-cards">
+
+
+<div>
+
+<i class="fa-solid fa-stethoscope"></i>
+
+<h3>Clínica Geral</h3>
+
+</div>
+
+
+<div>
+
+<i class="fa-solid fa-heart-pulse"></i>
+
+<h3>Cardiologia</h3>
+
+</div>
+
+
+<div>
+
+<i class="fa-solid fa-person-pregnant"></i>
+
+<h3>Ginecologia</h3>
+
+</div>
+
+
+<div>
+
+<i class="fa-solid fa-child"></i>
+
+<h3>Pediatria</h3>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="form-agendamento">
+
+
+<h2>
+
+Dados da consulta
+
+</h2>
+
+
+
+<form>
+
+
+<label>
+
+Nome completo
+
+</label>
+
+<input type="text" placeholder="Digite seu nome">
+
+
+
+<label>
+
+Telefone
+
+</label>
+
+<input type="tel" placeholder="(00) 00000-0000">
+
+
+
+<label>
+
+Email
+
+</label>
+
+<input type="email" placeholder="Digite seu email">
+
+
+
+
+
+<label>
+
+Especialidade
+
+</label>
+
+
+<select>
+
+<option>
+
+Selecione
+
+</option>
+
+<option>
+
+Clínica Geral
+
+</option>
+
+<option>
+
+Cardiologia
+
+</option>
+
+<option>
+
+Ginecologia
+
+</option>
+
+<option>
+
+Pediatria
+
+</option>
+
+</select>
+
+
+
+
+
+<label>
+
+Data
+
+</label>
+
+
+<input type="date">
+
+
+
+
+
+<label>
+
+Horário
+
+</label>
+
+
+<select>
+
+<option>
+
+Selecione um horário
+
+</option>
+
+<option>
+
+08:00
+
+</option>
+
+<option>
+
+10:00
+
+</option>
+
+<option>
+
+14:00
+
+</option>
+
+<option>
+
+16:00
+
+</option>
+
+
+</select>
+
+
+
+
+
+
+<label>
+
+Observações
+
+</label>
+
+
+<textarea placeholder="Digite alguma informação importante"></textarea>
+
+
+
+
+
+<button>
+
+Confirmar agendamento
+
+</button>
+
+
+
+</form>
+
+
+
+</section>
+
+
+
+
+
+
+<footer>
+
+
+<div class="footer-container">
+
+
+<div>
+
+<h2>
+
+Seu Bem Estar
+
+</h2>
+
+
+<p>
+
+Cuidado, saúde e atendimento humanizado.
+
+</p>
+
+</div>
+
+
+
+
+<div>
+
+<h3>
+
+Contato
+
+</h3>
+
+
+<p>
+
+📞 (33) 3723-1345
+
+</p>
+
+
+<p>
+
+📧 contato@seubemestar.com
+
+</p>
+
+
+</div>
+
+
+
+
+<div>
+
+<h3>
+
+Horário
+
+</h3>
+
+
+<p>
+
+Segunda a Sexta
+
+</p>
+
+
+<p>
+
+07:00 às 17:00
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="copyright">
+
+© 2026 Seu Bem Estar | Todos os direitos reservados.
+
+</div>
+
+
+</footer>
+
+
+
+
+
+<a class="whatsapp"
+
+href="https://wa.me/553337231345"
+
+target="_blank">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+
 
 </body>
 
